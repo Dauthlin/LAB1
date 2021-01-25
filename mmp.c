@@ -23,6 +23,7 @@ int main(void)
 	printf("\n");
 	}
    }
+   else{
    //printf(" Please insert the number of rows and columns for second matrix\n");
 
   if (n != p)
@@ -57,4 +58,5 @@ int main(void)
   }
 
   return 0;
+   }
 }
