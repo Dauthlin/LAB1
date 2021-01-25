@@ -11,7 +11,7 @@ int main(void)
 	 n = c+1;
  	 p = c+1;
  	 q = c+1;
-
+ }
 //printf(" Insert your matrix elements : \n ");
   for (c = 0; c < m; c++){
     for (d = 0; d < n; d++){
@@ -58,6 +58,6 @@ int main(void)
       printf(" \n ");
     }
   }
-}
+
   return 0;
 }
