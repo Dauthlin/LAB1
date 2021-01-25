@@ -13,7 +13,7 @@ int main(void)
  	 q = c+1;
 
 //printf(" Insert your matrix elements : \n ");
-fork()
+fork();
  if (fork() == 0) {
   for (c = 0; c < m; c++){
     for (d = 0; d < n; d++){
@@ -29,7 +29,7 @@ fork()
     printf(" Your given matrices cannot be multiplied with each other. \n ");
   else
   {
-    fork()
+    fork();
     if (fork() == 1){
     //printf(" Insert your elements for second matrix \n ");
     for (c = 0; c < p; c++){
