@@ -13,8 +13,6 @@ int main(void)
  	 q = c+1;
 
 //printf(" Insert your matrix elements : \n ");
-fork();
- if (fork() == 0) {
   for (c = 0; c < m; c++){
     for (d = 0; d < n; d++){
 	fst[c][d] = rand()%100 + 1;
@@ -30,7 +28,7 @@ fork();
   else
   {
     fork();
-    if (fork() == 1){
+    if (fork() == 0){
     //printf(" Insert your elements for second matrix \n ");
     for (c = 0; c < p; c++){
       for (d = 0; d < q; d++){
@@ -40,14 +38,17 @@ fork();
 	printf("\n");
 	}
     }
-    for (c = 0; c < m; c++) {
-      for (d = 0; d < q; d++) {
-        for (k = 0; k < p; k++) {
-          tot = tot + fst[c][k] * sec[k][d];
-        }
-        mul[c][d] = tot;
-        tot = 0;
-      }
+    fork();
+    if (fork() == 1){
+	    for (c = 0; c < m; c++) {
+	      for (d = 0; d < q; d++) {
+		for (k = 0; k < p; k++) {
+		  tot = tot + fst[c][k] * sec[k][d];
+		}
+		mul[c][d] = tot;
+		tot = 0;
+	      }
+	    }
     }
  
     printf("\n The result of matrix multiplication or product of the matrices is: \n "); 
