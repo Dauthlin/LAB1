@@ -6,6 +6,7 @@ int main(void)
   int c, d, p, q, m, n, k, tot = 0;
   int fst[10][10], sec[10][10], mul[10][10];
   int  maxd = 3;
+  pid_t pid;
  for (c = 0; c < maxd; c++){
  	 m = c+1;
 	 n = c+1;
