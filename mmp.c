@@ -20,15 +20,12 @@ int main(void)
 	}
 	printf("\n");
 	}
- }
    //printf(" Please insert the number of rows and columns for second matrix\n");
 
   if (n != p)
     printf(" Your given matrices cannot be multiplied with each other. \n ");
   else
   {
-    fork();
-    if (fork() == 0){
     //printf(" Insert your elements for second matrix \n ");
     for (c = 0; c < p; c++){
       for (d = 0; d < q; d++){
@@ -37,18 +34,15 @@ int main(void)
 	}
 	printf("\n");
 	}
-    }
-    fork();
-    if (fork() == 1){
-	    for (c = 0; c < m; c++) {
-	      for (d = 0; d < q; d++) {
-		for (k = 0; k < p; k++) {
-		  tot = tot + fst[c][k] * sec[k][d];
-		}
-		mul[c][d] = tot;
-		tot = 0;
-	      }
-	    }
+
+    for (c = 0; c < m; c++) {
+      for (d = 0; d < q; d++) {
+        for (k = 0; k < p; k++) {
+          tot = tot + fst[c][k] * sec[k][d];
+        }
+        mul[c][d] = tot;
+        tot = 0;
+      }
     }
  
     printf("\n The result of matrix multiplication or product of the matrices is: \n "); 
