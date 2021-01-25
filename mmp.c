@@ -13,6 +13,8 @@ int main(void)
  	 q = c+1;
 
 //printf(" Insert your matrix elements : \n ");
+fork()
+ if (fork() == 0) {
   for (c = 0; c < m; c++){
     for (d = 0; d < n; d++){
 	fst[c][d] = rand()%100 + 1;
@@ -20,12 +22,15 @@ int main(void)
 	}
 	printf("\n");
 	}
+ }
    //printf(" Please insert the number of rows and columns for second matrix\n");
 
   if (n != p)
     printf(" Your given matrices cannot be multiplied with each other. \n ");
   else
   {
+    fork()
+    if (fork() == 1){
     //printf(" Insert your elements for second matrix \n ");
     for (c = 0; c < p; c++){
       for (d = 0; d < q; d++){
@@ -34,7 +39,7 @@ int main(void)
 	}
 	printf("\n");
 	}
-
+    }
     for (c = 0; c < m; c++) {
       for (d = 0; d < q; d++) {
         for (k = 0; k < p; k++) {
